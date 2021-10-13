@@ -1,0 +1,74 @@
+<<<<<<< HEAD
+<!--
+*************************************
+* Created by IntelliJ IDEA          *
+* User: Nhat                     *
+* Email: nhatnpa2508@gmail.com      *
+* Date: 7/19/2019                     *
+* Time: 3:23 PM                     *
+*************************************
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Customer</title>
+</head>
+<body>
+<a href="/create-customer">Create new customer</a>
+<h1>Customers</h1>
+<table border="1">
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Edit | Delete</th>
+        <th>View</th>
+    </tr>
+    <th:block th:each="customer: ${customers}">
+        <tr>
+            <td th:text="${customer.firstName}"></td>
+            <td th:text="${customer.lastName}"></td>
+            <td><a th:href="@{/edit-customer/__${customer.id}__}">Edit</a><a> | </a>
+            <a th:href="@{/delete-customer/__${customer.id}__}">Delete</a></td>
+            <td><a th:href="@{/view-customer/__${customer.id}__}">View</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+=======
+<!--
+*************************************
+* Created by IntelliJ IDEA          *
+* User: Nhat                     *
+* Email: nhatnpa2508@gmail.com      *
+* Date: 7/19/2019                     *
+* Time: 3:23 PM                     *
+*************************************
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Customer</title>
+</head>
+<body>
+<a href="/create-customer">Create new customer</a>
+<h1>Customers</h1>
+<table border="1">
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Edit | Delete</th>
+    </tr>
+    <th:block th:each="customer: ${customers}">
+        <tr>
+            <td th:text="${customer.firstName}"></td>
+            <td th:text="${customer.lastName}"></td>
+            <td><a th:href="@{/edit-customer/__${customer.id}__}">Edit</a><a> | </a>
+            <a th:href="@{/delete-customer/__${customer.id}__}">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+>>>>>>> 5f51a86c18aa2e8cb69ea8806d890c307b27259d
+</html>
